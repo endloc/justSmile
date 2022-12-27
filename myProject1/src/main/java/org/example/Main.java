@@ -12,7 +12,7 @@ public class Main {
         Scanner n4 = new Scanner(System.in);
         int num4 = n4.nextInt();
 
-        System.out.println("max number: " +
+        System.out.println("max numberrrr: " +
                 ((num1>=num2&&num1>=num3&&num1>=num4)?num1:(num2>=num1&&num2>=num3&&num2>=num4)?num2:
                         (num3>=num1&&num3>=num2&&num3>=num4)?num3:(num4>=num1&&num4>=num2&&num4>=num2)?num4:num1));
     }
