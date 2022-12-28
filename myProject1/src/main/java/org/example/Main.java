@@ -3,18 +3,17 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner n1 = new Scanner(System.in);
-        int num1 = n1.nextInt();
-        Scanner n2 = new Scanner(System.in);
-        int num2 = n2.nextInt();
-        Scanner n3 = new Scanner(System.in);
-        int num3 = n3.nextInt();
-        Scanner n4 = new Scanner(System.in);
-        int num4 = n4.nextInt();
-
-        System.out.println("max number: " +
-                ((num1>=num2&&num1>=num3&&num1>=num4)?num1:(num2>=num1&&num2>=num3&&num2>=num4)?num2:
-                        (num3>=num1&&num3>=num2&&num3>=num4)?num3:(num4>=num1&&num4>=num2&&num4>=num2)?num4:num1));
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter array length: ");
+        int size = input.nextInt(); // Читаем с клавиатуры размер массива и записываем в size
+        int numbers[] = new int[size];
+        System.out.println("Insert array elements:");
+        /*Пройдёмся по всему массиву, заполняя его*/
+        for (int i = 0; i < size; i++) {
+            numbers[i] = input.nextInt(); // Заполняем массив элементами, введёнными с клавиатуры
+        }
+        java.util.Arrays.sort(numbers);
+        System.out.println("Max element is " + numbers[size - 1]);
     }
 }
 
